@@ -19,8 +19,6 @@ function setZindex() {
 }
 
 function changeImg(){
- 
-
   // Si el valor de z-index de cada una de les imatges és igual a la quantitat d'imatges - 1 (0 1 2 3 z-index, 1 2 3 4 length -1), 
   // aplica clip path a la imatge.
   // Fem que la imatge superior (amb z-index 3) es coloqui al fons (amb z-index 0).
