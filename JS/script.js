@@ -26,10 +26,6 @@ function changeImg(){
   // Fem que la imatge superior (amb z-index 3) es coloqui al fons (amb z-index 0).
   // I que les imatges restants s'incrementin en 1 el valor de z-index.
 
-
-
-  
-
   for (var i = 0; i < imatgesHero.length; i++) {
     if (imatgesHero[i].style.zIndex == imatgesHero.length - 1) {
       
