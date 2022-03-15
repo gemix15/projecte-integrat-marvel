@@ -317,6 +317,9 @@
 
 /* Secció merchandising */
 
+
+/* POSAR TRANSPARÈNCIA A LES IMATGES DE BG */
+/* POSAR TRANSICIÓ A LES IMATGES DE BG */
 .sec-merch
 {
 	width: 100%;
@@ -348,10 +351,12 @@
 .cont2-merch
 {
 	width: auto;
-	height: 30%;
+	height: 0;
 	margin: 100px;
+	padding: 15px;
 	background-color: rgba(0, 0, 0, 0.5);
-	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
 }
 
 

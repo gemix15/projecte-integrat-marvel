@@ -81,13 +81,15 @@ function setImgMerchBackgroud(event){
   var merchBg = document.getElementById("merch-bg");
   var infoMerch = document.getElementById("info-merch");
   merchBg.style.backgroundImage = "url(" + event.currentTarget.src + ")";
-  infoMerch.style.visibility = "visible";
+  infoMerch.style.opacity = "100%";
+  infoMerch.style.height = "50%";
 }
 
 function unsetImgMerchBackgroud(event){
   var merchBg = document.getElementById("merch-bg");
   var infoMerch = document.getElementById("info-merch");
   merchBg.style.backgroundImage = "";
-  infoMerch.style.visibility = "hidden";
+  infoMerch.style.opacity = "0";
+  infoMerch.style.height = "0";
 }
 
