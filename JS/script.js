@@ -1,5 +1,4 @@
 setInterval(changeImg, 3000);
-setInterval(sliderAct, 2000);
 
 window.onscroll = function() {scrollNav()};
 
@@ -45,42 +44,50 @@ function changeImg(){
 
 function scrollNav(){
   var menuB = document.getElementById("menu-b");
+  var menuA = document.getElementById("menu-a");
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    menuB.style.height = '70px';
-    menuB.style.top= '0';
+    menuA.style.height = "0";
+    // menuB.style.height = '70px';
+    // menuB.style.top= '0';
   } else if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) {
-    menuB.style.height = '50px';
-    menuB.style.top = '50px';
+    menuA.style.height = "60px";
+    // menuB.style.height = '50px';
+    // menuB.style.top = '50px';
   }
 }
 
-// MODIFICAR PERQUE NO FUNCIONA
-var imatgesAct = document.getElementsByClassName("slider-act");
+function showImgAct(event, target){
+  var imgActList = document.getElementsByClassName("slider-act");
 
-function actZindex(){
-  for (var i = 0; i < imatgesAct.length; i++) {
-    imatgesAct[i].style.zIndex = i;
-    console.log(imatgesAct[i] + ": " +imatgesAct[i].style.zIndex);
+  for (var i = 0; i < imgActList.length; i++){
+    imgActList[i].style.display = "none";
   }
+
+  var tabList = document.getElementsByClassName("tab-act");
+
+  for (var i = 0; i < tabList.length; i++){
+    tabList[i].classList.remove("tab-active");
+  }
+
+  document.getElementById(target).style.display = "block";
+  event.currentTarget.classList.add("tab-active");
+
 }
 
 
-function sliderAct(){
-  for (var i = 0; i < imatgesAct.length; i++) {
-    if (imatgesAct[i].style.zIndex == imatgesAct.length - 1) {
-      
-        imatgesAct[i].style.zIndex = 0;
-        
-        imatgesAct[i].style.clipPath = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
-        } else if(imatgesAct[i].style.zIndex == imatgesAct.length -2){
-            imatgesAct[i].style.clipPath = 'polygon(0 0, 0 0, 0 100%, 0 100%)';
-            imatgesAct[i].style.zIndex++;
-           }
+function setImgMerchBackgroud(event){
+  console.log(event);
+  var merchBg = document.getElementById("merch-bg");
+  var infoMerch = document.getElementById("info-merch");
+  merchBg.style.backgroundImage = "url(" + event.currentTarget.src + ")";
+  infoMerch.style.visibility = "visible";
+}
 
-            else {
-              imatgesAct[i].style.zIndex++;
-            }
-    }
+function unsetImgMerchBackgroud(event){
+  var merchBg = document.getElementById("merch-bg");
+  var infoMerch = document.getElementById("info-merch");
+  merchBg.style.backgroundImage = "";
+  infoMerch.style.visibility = "hidden";
 }
 

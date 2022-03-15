@@ -1,4 +1,3 @@
-
 *
 {
 	margin: 0;
@@ -28,7 +27,7 @@
 	text-align: left;
 }
 
-.text-sections
+.text-sections2
 {
 	font-family: 'Raleway', sans-serif;
 	font-size: .8em;
@@ -44,13 +43,22 @@
 
 .titulo-sec
 {
+	font-family: 'Marvel', sans-serif;
 	margin-top: 2em;
 	color: #fff;
 	font-size: 2.4em;
 }
 
+.titulo-tab
+{
+	font-family: 'Marvel', sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+}
+
 .titulo-sec2
 {
+	font-family: 'Marvel', sans-serif;
 	margin-top: 2em;
 	color: #000;
 	font-size: 2.4em;
@@ -58,69 +66,60 @@
 
 /*Navbar*/
 
-.navbar
+.superNavbar
 {
 	background-color: #3e3e3e;
-	height: 110px;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	z-index: 100;
 }
-
-/*.navbar img
-{
-	width: auto;
-	height: 48px;
-	margin-left: 20px;
-}*/
 
 .menu-a
 {
 	width: 100%;
 	height: 60px;
 	margin: 0;
-	position: absolute;
-	top: 0;
-	align-items: center;
-	justify-content: center;
+	position: relative;
+	transition: height 1s;
+	overflow: hidden;
+}
+
+.menu-a img 
+{
+	width: auto;
+	height: 50px;
 }
 
 .menu-a .logo-ma
 {
-	width: auto;
-	height: 50px;
-	position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  /*text-align: center;*/
-  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
 }
 
 .menu-a .logo-user
 {
-	width: auto;
-	height: 25px;
 	position: absolute;
-	margin: auto;
-	right: 2%;
+	right: 10px;
 	top: 10px;
-	z-index: 1;
 }
 
 .menu-b
 {
 	width: 100%;
 	height: 50px;
-	position: fixed;
-	top: 50px;
 	background-color: #3e3e3e;
 	z-index: 10;
-	transition: 0s;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: space-around;
 }
 
 .menu-lista
 {
-	width: 15%;
-	height: 100%;
-	margin: 0 7.2%;
 	text-decoration: none;
 	color: #fff;
 }
@@ -138,22 +137,7 @@
 	height: 1000px;
 	overflow: hidden;
 	position: relative;
-}
-
-.evento-slider
-{
-	width: 100vw;
-	height: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: clip-path 2s;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-#init-img
-{
-	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #video-fondo
@@ -317,11 +301,10 @@
 
 .princ-tickets
 {
-	width: auto;
-	height: 300px;
-	/*background-color: blue;*/
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .princ-tickets .texto-sec
@@ -334,7 +317,9 @@
 
 .princ-tickets button
 {
-	margin: 13% 35%;
+	width: 200px;
+	height: auto;
+	margin: auto;
 }
 
 .princ-tickets a 
@@ -510,45 +495,48 @@
   }
 }
 
-/*.sec-footer
-{
-	width: 100%;
-	height: 500px;
-	background-color: green;
-	display: inline-block;
-}
-
-.princ-footer
-{
-	width: auto;
-	height: 300px;
-	background-color: yellow;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	margin-top: 4em;
-}
-
-.menu-inf
-{
-	background-color: dimgrey;
-	display: flex;
-	flex-flow: column;
-}
-
-.menu-inf a 
-{
+@media only screen and (max-width: 600px){
+	.titulo-princ {
+    font-size: 1.3em;
+  	}
+	.superNavbar{
+	height: auto;
+	position: sticky;
+	}
+	.menu-a img{
+	max-height: 25px;
+	}
+	.menu-b .menu-lista{
 	font-size: 1.2em;
-	margin: 5px 50px;
-	text-decoration: none;
-	color: #000;
+	}
+	.menu-b{
+	align-content: space-between;
+	}
+	.sec-evento {
+    height: 500px;
+	}
+	.intro-evento {
+    width: 60%;
+	}
+	.texto-evento {
+    width: auto;
+	}
+	.link-evento {
+    width: 100px;
+    height: auto;
+    font-size: .9em;
+	}
+	.sec-noticias {
+    height: 700px;
+	}
+	.sec-tickets {
+    height: auto;
+	}
+	.princ-tickets {
+	grid-template-columns: repeat(1, 1fr);
+	margin-bottom: 10px;
+	}
+	.princ-tickets .texto-sec {
+    font-size: .8em;
+	}
 }
-
-.submenu-inf
-{
-	margin-left: 20px;
-}
-
-.redes
-{
-	background-color: purple;
-}*/

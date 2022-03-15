@@ -1,13 +1,5 @@
 /*Sección evento*/
 
-.sec-evento
-{
-	width: 100%;
-	height: 1000px;
-	overflow: hidden;
-	position: relative;
-}
-
 .evento-slider
 {
 	width: 100vw;
@@ -24,48 +16,41 @@
 	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 
-#titulo-evento
-{
-	position: absolute;
-	top: 45%;
-	left: 45%;
-	z-index: 1000;
-	color: #fff;
-	font-weight: bold;
-	font-size: 4em;
-}
-
-#video-fondo
+.evento-slider
 {
 	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
-	position: fixed;
-	left: 0;
-	right: 0;
+	height: 100%;
+	position: absolute;
 	top: 0;
-	bottom: 0;
-	z-index: -1;
+	left: 0;
+	transition: clip-path 2s;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#init-img
+{
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 
 .intro-evento
 {
-	width: 300px;
+	width: 100%;
 	height: auto;
-	margin: auto;
-	padding: 10px;
-	background-color: pink;
-	border: solid;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	margin-top: 20%;
+	flex-direction: row;
 }
 
-.intro-evento h1
+#titulo-evento
 {
-	margin-bottom: 25px;
+	font-family: 'Marvel';
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	color: #fff;
+	font-weight: 900;
+	font-size: 17rem;
+	text-align: left;
 }
 
 .link-evento
@@ -83,35 +68,34 @@
 {
 	width: 100%;
 	height: 600px;
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	background: url(../IMG/background_galaxy.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: solid 1px #000;
 	overflow: hidden;
+	padding: 100px;
 }
 
 .sec-descripcion p 
 {
-	width: 40%;
-	height: auto;
-	padding: 100px;
-	margin: 20px;
+	width: 100%;
+	margin: auto;
 	color: #fff;
 }
 
 .sec-descripcion img 
 {
-	width: auto;
-	height: 350px;
-	margin: 100px;
+	width: 100%;
+	height: auto;
+	margin: auto;
 }
 
 .sec-descripcion .logo-ma-ext
 {
-	width: auto;
-	height: 200px;
+	width: 200px;
+	height: auto;
 	margin: auto;
 }
 
@@ -137,18 +121,19 @@
 
 .princ-mapa
 {
-	width: auto;
-	height: 250px;
-	margin: 10px;
+	width: 100%;
+	height: auto;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+	margin: 0 100px;
 }
 
 .sub-mapa
 {
-	width: 60%;
+	width: 100%;
 	height: auto;
-	margin: 10px auto;
+	/* margin: auto; */
 }
 
 /*Sección actividades*/
@@ -160,58 +145,78 @@
 	background-color: #202020;
 	border: solid 1px #fff;
 	overflow: hidden;
+	position: relative;
 }
 
+.contTempAct{
+	position: absolute;
+	width: auto;
+	top: 0px;
+	right: 0px;
+	z-index: 99;
+	display: flex;
+}
 
-/*MODIFICAR PERQUE NO FUNCIONA*/
-.cont-slider-act
+.tab-act
 {
 	width: 100%;
+	height: 50px;
+	font-size: 1.5rem;
+	color: #fff;
+	background-color: #3e3e3e;
+	margin: 0 5px;
+}
+
+.cont-slider-act
+{
+	width: auto;
 	height: 100%;
-	/*-webkit-clip-path: polygon(0 0, 100% 0, 39% 100%, 0% 100%); 
-	clip-path: polygon(0 0, 100% 0, 39% 100%, 0% 100%);*/
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.tab-active
+{
+	background-color: hotpink;
 }
 
 .slider-act
 {
-	width: 100%;
-	height: auto;
-	position: relative;
-	top: 0;
-	left: 0;
+	width: auto;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	transition: 1s;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	/* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
 }
 
-#init-img-act
-{
-	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-}
-
-/*.cont-act
+.cont-act
 {
 	width: 50%;
-	height: 100vh;
-	background-color: royalblue;
-	border: solid 1px #000;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .sec-act h1
 {
+	font-size: 9rem;
 	color: #fff;
-	margin: 60px;
-	position: relative;
-	top: 100px;
-	left: 100px;
+	/* position: relative;
+	bottom: 0; */
+	margin-top: 40%;
+	background-color: red;
 }
 
 .text-noticias
 {
-	position: absolute;
-	bottom: 100px;
-	left: 100px;
+	font-size: 1.7rem;
 	color: #fff;
-}*/
+	/* position: relative;
+	bottom: 0; */
+}
 
 /*Sección concursos*/
 
@@ -309,3 +314,44 @@
 	font-size: .8em;
 	font-family: 'Raleway', sans-serif;
 }
+
+/* Secció merchandising */
+
+.sec-merch
+{
+	width: 100%;
+	height: 900px;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-flex;
+	transition: 1s;
+}
+
+.cont-merch
+{
+	width: 100%;
+	height: auto;
+	margin: 100px;
+	float: left;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	overflow: hidden;
+}
+
+.img-merch
+{
+	width: auto;
+	height: 200px;
+}
+
+.cont2-merch
+{
+	width: auto;
+	height: 30%;
+	margin: 100px;
+	background-color: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+}
+
+
