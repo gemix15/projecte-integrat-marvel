@@ -1,3 +1,6 @@
+/*Desarrollado por:  Gemma Batlle*/
+/*Revisado:  Marzo 2022*/
+
 /*Sección evento*/
 
 .evento-slider
@@ -32,12 +35,11 @@
 	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 
-.intro-evento
+.principalEvento
 {
-	width: 100%;
+	width: auto;
 	height: auto;
-	display: flex;
-	flex-direction: row;
+	padding-top: 20%;
 }
 
 #titulo-evento
@@ -159,12 +161,13 @@
 
 .tab-act
 {
-	width: 100%;
+	width: 50px;
 	height: 50px;
-	font-size: 1.5rem;
-	color: #fff;
+	/*font-size: 1.5rem;
+	color: #fff;*/
 	background-color: #3e3e3e;
 	margin: 0 5px;
+	border-radius: 50%;
 }
 
 .cont-slider-act
@@ -261,13 +264,12 @@
 
 .con-concursos:hover
 {
-	height: 600px;
-	width: 600px;
+	transform: scale(1.2);
 }
 
 .con-concursos:nth-child(1)
 {
-	background: url(../IMG/draw_wanda1.jpg);
+	background: url(../IMG/Concursos/draw_wanda1.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
@@ -275,7 +277,7 @@
 
 .con-concursos:nth-child(2)
 {
-	background: url(../IMG/draw_drstrange1.jpg);
+	background: url(../IMG/Concursos/draw_drstrange1.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
@@ -283,7 +285,7 @@
 
 .con-concursos:nth-child(3)
 {
-	background: url(../IMG/draw_thor1.jpg);
+	background: url(../IMG/Concursos/draw_thor1.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
@@ -318,8 +320,8 @@
 /* Secció merchandising */
 
 
-/* POSAR TRANSPARÈNCIA A LES IMATGES DE BG */
-/* POSAR TRANSICIÓ A LES IMATGES DE BG */
+/* POSAR LOGOS I/O QR AL FOOTER */
+/* ADAPTAR TOT AMB @MEDIA */
 .sec-merch
 {
 	width: 100%;
@@ -329,7 +331,34 @@
 	background-size: cover;
 	display: inline-flex;
 	transition: 1s;
+	position: relative;
 }
+
+#filtre
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-color: rgba(255, 255, 255, 1);
+	z-index: 3;
+	transition: all 2s;
+}
+
+/*.sec-merch::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0.5;
+/*	background-color: orange;
+}*/
+
+/*.sec-merch:hover::before{
+	opacity: 0.5;
+}*/
 
 .cont-merch
 {
@@ -340,6 +369,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	overflow: hidden;
+	z-index: 4;
 }
 
 .img-merch
@@ -357,6 +387,89 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	opacity: 0;
 	transition: 1s;
+	z-index: 4;
 }
 
 
+@media only screen and (max-width: 600px){
+	.sec-evento{
+		background-image: url(../IMG/comic.jpg);
+	}
+	.evento-slider{
+		display: none;
+	}
+	#titulo-evento{
+		font-size: 7rem;
+	}
+	.sec-descripcion{
+		padding: 20px;
+		display: inherit;
+	}
+	.sec-descripcion img {
+		display: none;
+	}
+	.sec-descripcion .logo-ma-ext{
+		display: none;
+	}	
+	.sec-mapa iframe {
+	    display: none;
+	}
+	.sec-mapa {
+	    display: block;
+	}
+	.princ-mapa {
+	    display: flex;
+	    flex-direction: column;
+	    margin: 0;
+	}
+	.sub-mapa h2{
+		margin-top: 10px;
+	}
+	.tab-act {
+	    width: 20px;
+	    height: 20px;
+	    /*font-size: .5rem;*/
+	}
+	.cont-slider-act {
+	    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+	.cont-act
+	{
+		left: 30%;
+	}
+	.sec-act h1 {
+	    font-size: 2rem;
+	    margin-top: 80%;
+	}
+	.sec-act .text-noticias{
+		font-size: .8rem;
+	}
+	.sec-concursos {
+		height: 800px;
+	}
+	.con-concursos {
+	    width: 150px;
+	    height: 150px;
+	    margin-top: 300px;
+	}
+	.con-concursos:hover{
+		transform: scale(1.0);
+	}
+	.contenido-concursos {
+	    position: relative;
+	    width: auto;
+	    height: 100%;
+	    text-align: justify;
+	    display: block;
+	}
+	.contenido-concursos h2 {
+		font-size: 1em;
+	}
+	.contenido-concursos p {
+		font-size: .6em;
+	}
+	.sec-concursos .text-conc {
+	 	width: 280px;
+		margin-top: -280px;
+	}
+}

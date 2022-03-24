@@ -1,4 +1,6 @@
 setInterval(changeImg, 3000);
+const introTimeOut = setTimeout(introWeb, 7000);
+
 
 window.onscroll = function() {scrollNav()};
 
@@ -80,16 +82,31 @@ function setImgMerchBackgroud(event){
   console.log(event);
   var merchBg = document.getElementById("merch-bg");
   var infoMerch = document.getElementById("info-merch");
+  var filtre = document.getElementById("filtre");
   merchBg.style.backgroundImage = "url(" + event.currentTarget.src + ")";
   infoMerch.style.opacity = "100%";
   infoMerch.style.height = "50%";
+  filtre.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
 }
 
 function unsetImgMerchBackgroud(event){
   var merchBg = document.getElementById("merch-bg");
   var infoMerch = document.getElementById("info-merch");
+  var filtre = document.getElementById("filtre");
   merchBg.style.backgroundImage = "";
   infoMerch.style.opacity = "0";
   infoMerch.style.height = "0";
+  filtre.style.backgroundColor = "rgba(255, 255, 255, 1)";
 }
 
+
+function introWeb(){
+  var navBar = document.getElementById("superNavbar");
+  var introText = document.getElementById("textoIntro");
+  var introLink = document.getElementById("linkIntro");
+  
+  navBar.style.display = "initial";
+  introText.style.display = "block";
+  introLink.style.display = "block";
+  
+}

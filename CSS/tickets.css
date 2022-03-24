@@ -1,0 +1,75 @@
+/*Desarrollado por:  Gemma Batlle*/
+/*Revisado:  Marzo 2022*/
+
+/*Sección tickets*/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	background-image: url(../IMG/fondos/fondo3.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*https://www.freepik.com/photos/marvel-background.Marvel background photo 
+created by wirestock - www.freepik.com*/
+
+.tituloTickets
+{
+    font-family: 'Marvel';
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.subtituloTickets
+{
+    font-family: 'Raleway';
+    font-size: 1.7rem;
+    color: white;
+}
+
+.tickets-princ
+{
+    width: 100%;
+    height: auto;
+    padding: 10%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.contenedor-tickets
+{
+    width: 100%;
+    height: auto;
+    margin: 0 60px;
+}
+
+.contenedor1
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.contenedor2
+{
+    margin-top: 20px;
+}
+
+.contenedor-tickets img 
+{
+    outline: 1px solid white;
+    outline-offset: 15px;
+}
+
+span
+{
+	font-size: 1rem;
+}

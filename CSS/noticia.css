@@ -1,73 +1,191 @@
+/*Desarrollado por:  Gemma Batlle*/
+/*Revisado:  Marzo 2022*/
+
+/*Sección noticias*/
+
+
+body
+{
+    background-image: url(../IMG/fondos/fondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* Fondo del body: https://www.freepik.com/photos/marvel-background. Marvel background 
+photo created by wirestock - www.freepik.com*/
+
+.tituloNoticia
+{
+    font-family: 'Marvel';
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.subtituloNoticia
+{
+    font-family: 'Raleway';
+    font-size: 1.7rem;
+    color: white;
+}
+
 .noticias-section
 {
     width: 100%;
     height: auto;
-    background: url(../IMG/background_galaxy.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     padding-top: 110px;
     overflow: hidden;
 }
 
-.masonry {
+.masonry 
+{
     transition: all .5s ease-in-out;
-    column-gap: 30px;
+    column-gap: 10px;
     column-fill: initial;
-    margin: 2rem;
+    margin: auto;
+    column-count: 4;
+    width: 70%;
 }
   
-.masonry .brick {
+.masonry .brick 
+{
     margin-bottom: 30px;
     display: inline-block; 
     vertical-align: top; 
+    /*max-width: 300px;*/
+    position: relative;
 }
   
-.masonry .brick img {
+.masonry .brick img 
+{
     transition: all .5s ease-in-out;
     backface-visibility: hidden; 
     width: 100%;
     height: auto;
+    filter: grayscale(100%);
+}
+
+.masonry .brick h2
+{
+    font-family: 'Raleway';
+    font-size: 1.2em;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.masonry .brick:hover h2
+{
+    display: block;
 }
   
-.masonry .brick:hover img {
-    opacity: .75;
-}
-  
-.masonry.bordered {
-    column-rule: 1px solid #eee;
-    column-gap: 50px;
- }
-  
-.masonry.bordered .brick {
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #eee;
-}
-  
-.masonry.gutterless {
-    column-gap: 0;
-}
-  
-.masonry.gutterless .brick {
-    margin-bottom: 0;
+.masonry .brick:hover img 
+{
+    filter: grayscale(0%);
 }
   
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .masonry {
+    .masonry 
+    {
       column-count: 2;
     }
 }
   
 @media only screen and (min-width: 1024px) {
-    .desc {
+    .desc 
+    {
       font-size: 1.25em;
     }
   
-    .intro {
+    .intro 
+    {
       letter-spacing: 1px;
     }
   
-    .masonry {
+    .masonry 
+    {
       column-count: 3;
     }
+}
+
+.noticia-princ
+{
+    width: 100%;
+    height: auto;
+    padding: 10%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.contenedor-noticia
+{
+    width: 100%;
+    height: auto;
+    margin: 0 60px;
+}
+
+.contenedor1
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.contenedor2
+{
+    margin-top: 20px;
+}
+
+.contenedor-noticia img 
+{
+    outline: 1px solid white;
+    outline-offset: 15px;
+}
+
+.noticia-sec
+{
+    width: 100%;
+    height: auto;
+    padding: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.noticias-contenedor
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticias-contenedor img
+{
+    max-width: 400px;
+    outline: 1px solid white;
+    outline-offset: 15px;
+}
+
+.noticias-contenedor h2
+{
+    max-width: 400px;
+    margin-top: 25px;
+}
+
+.noticias-contenedor a 
+{
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    color: red;
+}
+
+.noticias-contenedor a:hover
+{
+    color: white;
 }

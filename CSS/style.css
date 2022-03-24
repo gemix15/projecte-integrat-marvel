@@ -1,3 +1,11 @@
+/*Desarrollado por:  Gemma Batlle*/
+/*Revisado:  Marzo 2022*/
+
+body
+{
+	background-color: black;
+}
+
 *
 {
 	margin: 0;
@@ -5,32 +13,71 @@
 	box-sizing: border-box;
 }
 
-.titulo-princ
+@keyframes intro {
+  from   {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes intro2 {
+  from   {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.titulo-menu
 {
-	font-family: 'Marvel', sans-serif;
+	font-family: 'Marvel';
 	font-size: 2em;
 	text-align: center;
 	text-transform: uppercase;
+	color: white;
+}
+
+.titulo-princ
+{
+	font-family: 'Marvel', sans-serif;
+	font-size: 4em;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+}
+
+.titulo-web
+{
+	font-family: 'Marvel', sans-serif;
+	font-size: 10em;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	opacity: 1;
+	z-index: 100;
+
+	animation-name: intro2;
+	animation-duration: 5s;
+	/*animation-timing-function: ease-in-out;*/
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	margin-top: 40px;
 }
 
 .texto-princ
 {
 	font-family: 'Raleway', sans-serif;
-	font-size: .8em;
+	font-size: .9em;
 	text-align: center;
+	color: white;
 }
 
 .text-sections
 {
 	font-family: 'Raleway', sans-serif;
-	font-size: .8em;
+	font-size: .9em;
 	text-align: left;
 }
 
 .text-sections2
 {
 	font-family: 'Raleway', sans-serif;
-	font-size: .8em;
+	font-size: .9em;
 	text-align: left;
 	color: #fff;
 }
@@ -75,6 +122,12 @@
 	z-index: 100;
 }
 
+#superNavbar
+{
+	display: none;
+	background-color: transparent;
+}
+
 .menu-a
 {
 	width: 100%;
@@ -110,7 +163,7 @@
 {
 	width: 100%;
 	height: 50px;
-	background-color: #3e3e3e;
+	/*background-color: #3e3e3e;*/
 	z-index: 10;
 	display: flex;
 	flex-direction: column;
@@ -134,43 +187,53 @@
 .sec-evento
 {
 	width: 100%;
-	height: 1000px;
+	height: auto;
 	overflow: hidden;
 	position: relative;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: black;
 }
+
 
 #video-fondo
 {
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: -1;
+	z-index: 4;
+	opacity: 0;
+
+	animation-name: intro;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
 }
 
 .intro-evento
 {
-	width: 300px;
+	width: auto;
 	height: auto;
 	margin: auto;
 	padding: 10px;
-	background-color: pink;
-	border: solid;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
-	margin-top: 20%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.intro-evento h1
+#textoIntro, #linkIntro
 {
-	margin-bottom: 25px;
+	display: none;
+}
+
+span 
+{
+	font-size: 1.8em;
+	color: red;
 }
 
 .link-evento
@@ -178,20 +241,29 @@
 	width: 100px;
 	height: auto;
 	text-decoration: none;
-	color: #000;
+	color: red;
 	text-align: center;
 }
 
+.link-evento:hover
+{
+	color: white;
+}
+
+#seccionSecundaria
+{
+	width: 100%;
+	height: 700px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
 /*Sección noticias*/
 
 .sec-noticias
 {
-	width: 100%;
-	height: 800px;
-	background: url(../IMG/background_galaxy.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: inline-block;
+	height: auto;
+	background-color: #000;
+	/* display: inline-block; */
 	border: 1px solid black;
 }
 
@@ -267,7 +339,7 @@
 	left: 0;
 	display: none;
 	transition: all 1.5s;
-	font-size: 1em;
+	font-size: .9em;
 }
 
 .content-carrousel img:hover {
@@ -293,18 +365,17 @@
 
 .sec-tickets
 {
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	height: 500px;
-	display: inline-block;
+	background-color: #000;
+	height: auto;
+	/* display: inline-block; */
 }
 
 .princ-tickets
 {
-	width: 100%;
+  width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
 }
 
 .princ-tickets .texto-sec
@@ -315,19 +386,23 @@
 	color: #fff;
 }
 
-.princ-tickets button
+.princ-tickets a 
 {
 	width: 200px;
 	height: auto;
 	margin: auto;
-}
-
-.princ-tickets a 
-{
 	text-decoration: none;
 	color: #202020;
 	font-size: 1.4em;
+	background-color: white;
+	text-align: center;
 }
+
+.princ-tickets a:hover
+{
+	color: white;
+	background-color: #202020;
+} 
 
 /*Sección footer*/
 
@@ -338,6 +413,11 @@
   font-size:15px;
   line-height:24px;
   color:#737373;
+}
+.site-footer img 
+{
+	width: 200px;
+	height: auto;
 }
 .site-footer hr
 {
@@ -498,10 +578,10 @@
 @media only screen and (max-width: 600px){
 	.titulo-princ {
     font-size: 1.3em;
-  	}
+  }
 	.superNavbar{
 	height: auto;
-	position: sticky;
+	display: block;
 	}
 	.menu-a img{
 	max-height: 25px;

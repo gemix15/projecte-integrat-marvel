@@ -1,0 +1,48 @@
+/*Desarrollado por:  Gemma Batlle*/
+/*Revisado:  Marzo 2022*/
+
+/*Sección contacto*/
+
+
+
+#contactoPrincipal
+{
+	width: 100%;
+	height: auto;
+	padding: 10% 20%;
+	background-image: url(../IMG/fondos/fondo4.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#contactoPrincipal form 
+{
+	width: 400px;
+	height: 400px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+#contactoPrincipal form label
+{
+	font-family: 'Raleway';
+	font-size: 1rem;
+	color: white;
+}
+
+#contactoPrincipal form input
+{
+	width: 90%;
+	height: auto;
+	margin: 10px;
+}
+
+#contactoPrincipal form #mensaje
+{
+	height: 70px;
+}

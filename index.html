@@ -3,6 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Gemma Batlle">
+	<meta name="copyright" content="Gemma Batlle">
+	<meta name="revised" content="March 2022">
+	<meta name="keywords" content="marvel, arts, exposición">
+	<meta name="description" content="Marvels Arts es un evento fusión entre el UCM y el arte contemporáneo">
 	<link rel="stylesheet" href="CSS/style.css">
 	<link rel="stylesheet" href="CSS/bootstrap.min.css">
 	<link rel="stylesheet" href="CSS/all.min.css">
@@ -20,93 +25,96 @@
 </head>
 <body>
 
-	<nav class="superNavbar">
+	<nav class="superNavbar" id="superNavbar">
 		<div class="menu-a" id="menu-a">
 			<a href="index.html" class="logo-ma"><img src="IMG/LogoBlanc_def.png" alt=""></a>
-			<a href="#" class="logo-user"><img src="IMG/user-solid.png" alt=""></a>
+			<!-- <a href="#" class="logo-user"><img src="IMG/user-solid.png" alt=""></a> -->
 		</div>
 		<div class="menu-b" id="menu-b">
-	  		<a href="evento.html" class="menu-lista titulo-princ">El Evento</a>
-			<a href="#" class="menu-lista titulo-princ">Tickets</a>
-			<a href="noticia.html" class="menu-lista titulo-princ">Noticias</a>
-			<a href="#" class="menu-lista titulo-princ">Contacto</a>
-			<a href="#" class="menu-lista titulo-princ">FAQS</a>
+	  		<a href="evento.html" class="menu-lista titulo-menu">El Evento</a>
+			<a href="tickets.html" class="menu-lista titulo-menu">Tickets</a>
+			<a href="noticias.html" class="menu-lista titulo-menu">Noticias</a>
+			<a href="contacto.html" class="menu-lista titulo-menu">Contacto</a>
+			<a href="#" class="menu-lista titulo-menu">FAQS</a>
 		</div>
 	</nav>
 
 	<div class="sec-evento">
 		<video src="Video/Pexels Videos 2324293.mp4" id="video-fondo" autoplay loop muted></video>
-		<div class="intro-evento">
-			<h1 class="titulo-princ">El Evento</h1>
-			<p class="texto-princ texto-evento">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Id omnis libero exercitationem suscipit fugiat eaque sapiente reiciendis distinctio provident! Doloribus.</p>
-			<a href="evento.html" class="link-evento">Leer más...</a>
+		<div class="intro-evento" id="introEvento">
+			<h1 class="titulo-web">Marvel arts</h1>
+			<p class="texto-princ texto-evento" id="textoIntro"><span>20/21/22 Mayo</span><br>
+			Evento fusión entre el arte y el Universo cinematográfico de Marvel.</p>
+			<a href="evento.html" class="link-evento" id="linkIntro">Leer más...</a>
 		</div>	
 	</div>
 
-	<div class="sec-noticias">
-		<h1 class="titulo-princ titulo-sec">Noticias</h1>
-		<div class="entire-content">
-				<div class="content-carrousel">
-					<figure class="shadow"><img src="IMG/Noticias/noticia (1).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (2).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (3).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (4).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (5).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (6).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (7).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (1).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
-					<figure class="shadow"><img src="IMG/Noticias/noticia (2).jpg"/><a href=""><h2 class="titulo-princ">Últimas noticias</h2></a></figure>
+	<div id="seccionSecundaria">
+		<div class="sec-noticias">
+			<h1 class="titulo-princ titulo-sec">Noticias</h1>
+			<div class="entire-content">
+					<div class="content-carrousel">
+						<figure class="shadow"><img src="IMG/Noticias/noticia_moonKnight.jpg"/><a href="noticia.html"><h2 class="titulo-princ">'Moon Knight': La próxima serie del UCM</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_defenders.png"/><a href="noticia.html"><h2 class="titulo-princ">Todas las series disponibles en Disney+</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_multiverseOfMadness.png"/><a href="noticia.html"><h2 class="titulo-princ">Las últimas portadas de 'Empire Magazine' de Multiverse of Madness</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_guardiansOfTheGalaxy.jpeg"/><a href="noticia.html"><h2 class="titulo-princ">La nueva experiencia inmersiva de 'Guardianes de la Galaxia vol.2'</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_morbius.jpg"/><a href="noticia.html"><h2 class="titulo-princ">Ya disponible el tráiler de la nueva pelicula 'Morbius'</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_makingOfEternals.jpg"/><a href="noticia.html"><h2 class="titulo-princ">Ya disponible en Disney+ el making of de 'Eternals'</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_trailerDrStrange.jpg"/><a href="noticia.html"><h2 class="titulo-princ">Ya disponible el tráiler de la nueva pelicula 'Doctor Strange in the Multiverse of Madness'</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_oscarShangChi.png"/><a href="noticia.html"><h2 class="titulo-princ">'Shang Chi y la leyenda de los diez anillos' recibe la nominación al oscar por efectos especiales</h2></a></figure>
+						<figure class="shadow"><img src="IMG/Noticias/noticia_eternalsStreaming.jpg"/><a href="noticia.html"><h2 class="titulo-princ">'Eternals' ya disponible en streaming en Disney+</h2></a></figure>
+			</div>
+		</div>
+		</div>
+
+		<div class="sec-tickets">
+			<h1 class="titulo-princ titulo-sec">Tickets</h1>
+			<div class="princ-tickets">
+				<p class="texto-princ texto-sec">No dudes en reservar tus tickets con anterioridad para acudir sin falta al evento Marvel Arts. Recuerda que el ticket es válido para los tres días íntegramente, así como a todas las actividades y espectáculos.
+				<br>
+				¡Te esperamos! </p>
+				<a href="tickets.html">Reservar tickets</a>
+			</div>
 		</div>
 	</div>
-	</div>
-
-	<div class="sec-tickets">
-		<h1 class="titulo-princ titulo-sec">Tickets</h1>
-		<div class="princ-tickets">
-			<p class="texto-princ texto-sec">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam nihil assumenda modi dicta qui quas ut vel, adipisci ipsam atque autem distinctio perspiciatis omnis eum sit accusantium ipsum voluptate ab eius nisi quisquam, fugiat, alias magnam itaque. Quam repellat repellendus perferendis non suscipit. Reiciendis omnis iusto aliquam aperiam placeat nihil rerum ipsum? Facilis itaque tempore autem earum ad nihil?</p>
-			<button><a href="#">Comprar tickets</a></button>
-		</div>
-	</div>
-
 	<footer class="site-footer">
 		<div class="container">
 		  <div class="row">
 			<div class="col-sm-12 col-md-6">
 			  <h6>El evento</h6>
-			  <p class="text-justify">Scanfcode.com is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+			  <p class="text-justify">El proyecto Marvel Arts se basa en la idea de fusionar el fenómeno del Universo Cinematográfico de Marvel con el arte, en éste evento vas a encontrar todas las referencias de tus peliculas favoritas junto con la experiencia de asistir a una exposición de arte. Todo ello da forma a nuestro proyecto, creado con toda la dedicación posible para que sea una experiencia única apta para toda la familia.</p>
 			</div>
   
 			<div class="col-xs-6 col-md-3">
 			  <ul class="footer-links">
-				<li><a href="evento.html">El evento</a></li>
-				<li><a href="#">Tickets</a></li>
-				<li><a href="noticia.html">Noticias</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="evento.html">EL EVENTO</a></li>
+				<li><a href="tickets.html">TICKETS</a></li>
+				<li><a href="noticia.html">NOTICIAS</a></li>
+				<li><a href="contacto.html">CONTACTO</a></li>
 				<li><a href="#">FAQS</a></li>
 			  </ul>
 			</div>
+			<img src="img/logos/logo-llotja-blanc.svg" alt="easd Llotja">
 		  </div>
 		  <hr>
 		</div>
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-8 col-sm-6 col-xs-12">
-			  <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
-		   <a href="#">Marvel Arts</a>.
-			  </p>
+			  <p class="copyright-text">Gemma Batlle &copy; 2022 Todos los derechos reservados.</p>
 			</div>
   
 			<div class="col-md-4 col-sm-6 col-xs-12">
 			  <ul class="social-icons">
-				<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-				<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+				<li><a class="instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+				<li><a class="dribbble" href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+				<li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>   
 			  </ul>
 			</div>
 		  </div>
 		</div>
 	  </footer>
+
 	
 </body>
 </html>
