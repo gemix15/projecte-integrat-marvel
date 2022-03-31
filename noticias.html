@@ -15,29 +15,25 @@
 	<script src="JS/all.min.js"></script>
 	<script src="JS/bootstrap.bundle.min.js"></script>
 	<script src="JS/script.js"></script>
-	<!-- Tipografias -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet"> 
 	<title>Marvel arts</title>
 </head>
 <body>
-    <nav class="superNavbar">
-        <div class="menu-a" id="menu-a">
-            <a href="index.html" class="logo-ma"><img src="IMG/LogoBlanc_def.png" alt=""></a>
-            <a href="#" class="logo-user"><img src="IMG/user-solid.png" alt=""></a>
-        </div>
-        <div class="menu-b" id="menu-b">
-            <a href="evento.html" class="menu-lista titulo-menu">El Evento</a>
-            <a href="tickets.html" class="menu-lista titulo-menu">Tickets</a>
-            <a href="noticias.html" class="menu-lista titulo-menu">Noticias</a>
-            <a href="contacto.html" class="menu-lista titulo-menu">Contacto</a>
-            <a href="#" class="menu-lista titulo-menu">FAQS</a>
-        </div>
-    </nav>
+  <nav class="superNavbar" id="superNavbar">
+    <div class="menu-a" id="menu-a">
+      <a href="index.html" class="logo-ma"><img src="IMG/LogoBlanc_def.png" alt="logo MarvelArts"></a>
+      <a href="#" class="logo-user"><img src="IMG/user-solid.png" alt=""></a>
+      
+    </div>
+    <div id="toggle" onclick="toggle()"></div>
+    <div class="menu-b" id="menu-b">
+      <a href="index.html" class="menu-lista titulo-menu" id="inicioMobile">Inicio</a>
+        <a href="evento.html" class="menu-lista titulo-menu">El Evento</a>
+      <a href="tickets.html" class="menu-lista titulo-menu">Tickets</a>
+      <a href="noticias.html" class="menu-lista titulo-menu">Noticias</a>
+      <a href="contacto.html" class="menu-lista titulo-menu">Contacto</a>
+      <a href="faqs.html" class="menu-lista titulo-menu">FAQS</a> 
+    </div>
+  </nav>
     <section class="noticias-section">
         <div class="masonry">
             <div class="brick">
@@ -92,7 +88,7 @@
           <li><a href="tickets.html">TICKETS</a></li>
           <li><a href="noticia.html">NOTICIAS</a></li>
           <li><a href="contacto.html">CONTACTO</a></li>
-          <li><a href="#">FAQS</a></li>
+          <li><a href="faqs.html">FAQS</a></li>
           </ul>
         </div>
         <img src="img/logos/logo-llotja-blanc.svg" alt="easd Llotja">
@@ -115,5 +111,14 @@
         </div>
       </div>
       </footer>
+
+    <script type="text/javascript">
+    function toggle(){
+      var sec = document.getElementById('superNavbar');
+      var nav = document.getElementById('menu-b');
+      sec.classList.toggle('active')
+      nav.classList.toggle('active')
+    }
+  </script>
 </body>
 </html>

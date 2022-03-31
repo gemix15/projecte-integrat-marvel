@@ -3,19 +3,23 @@
 
 /*Sección contacto*/
 
-
+body
+{
+	background-image: url(../IMG/fondos/fondo4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 #contactoPrincipal
 {
-	width: 100%;
+	width: 90%;
 	height: auto;
 	padding: 10% 20%;
-	background-image: url(../IMG/fondos/fondo4.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	background-color: white;
+	margin: auto;
 }
 
 #contactoPrincipal form 
@@ -32,7 +36,7 @@
 {
 	font-family: 'Raleway';
 	font-size: 1rem;
-	color: white;
+	color: #000;
 }
 
 #contactoPrincipal form input

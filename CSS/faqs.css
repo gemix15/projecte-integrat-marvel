@@ -1,0 +1,68 @@
+/*Desarrollado por:  Gemma Batlle*/
+/*Revisado:  Marzo 2022*/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Marvel';
+	src: url(../Tipografias/Marvel-Regular.ttf);
+}
+
+@font-face{
+	font-family: 'Raleway';
+	src: url(../Tipografias/Raleway-VariableFont_wght.ttf);
+}
+
+body
+{
+	background-image: url(../IMG/fondos/fondo4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#sectionFaqs
+{
+	width: 80%;
+	height: auto;
+	background-color: #3e3e3e;
+	margin: auto;
+	padding-top: 150px;
+}
+
+.openQuestion 
+{
+  background-color: #3e3e3e;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 2em;
+  margin: 25px auto;
+}
+
+.activeQ, .openQuestion:hover 
+{
+  background-color: red;
+}
+
+.question 
+{
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #3e3e3e;
+} 
+
+@media only screen and (max-width: 600px){
+	#sectionFaqs{
+		padding-top: 90px;
+	}
+}

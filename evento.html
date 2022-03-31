@@ -15,32 +15,27 @@
 	<script src="JS/all.min.js"></script>
 	<script src="JS/bootstrap.bundle.min.js"></script>
 	<script src="JS/script.js"></script>
-	<!-- Tipografias -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet"> 
 	<title>Marvel arts</title>
 </head>
 <body>
 
-	<nav class="superNavbar">
+	<nav class="superNavbar" id="superNavbar">
 		<div class="menu-a" id="menu-a">
-			<a href="index.html" class="logo-ma"><img src="IMG/LogoBlanc_def.png" alt=""></a>
+			<a href="index.html" class="logo-ma"><img src="IMG/LogoBlanc_def.png" alt="logo MarvelArts"></a>
 			<a href="#" class="logo-user"><img src="IMG/user-solid.png" alt=""></a>
+			
 		</div>
+		<div id="toggle" onclick="toggle()"></div>
 		<div class="menu-b" id="menu-b">
+			<a href="index.html" class="menu-lista titulo-menu" id="inicioMobile">Inicio</a>
 	  		<a href="evento.html" class="menu-lista titulo-menu">El Evento</a>
 			<a href="tickets.html" class="menu-lista titulo-menu">Tickets</a>
 			<a href="noticias.html" class="menu-lista titulo-menu">Noticias</a>
 			<a href="contacto.html" class="menu-lista titulo-menu">Contacto</a>
-			<a href="#" class="menu-lista titulo-menu">FAQS</a>
+			<a href="faqs.html" class="menu-lista titulo-menu">FAQS</a> 
 		</div>
 	</nav>
-
-	<div class="sec-evento">
+	<div class="sec-evento" id="secEvento">
 		<img src="IMG/EventoHero/heroImage1.jpg" alt="" class="evento-slider">
 		<img src="IMG/EventoHero/heroImage2.jpg" alt="" class="evento-slider">
 		<img src="IMG/EventoHero/heroImage3.jpg" alt="" class="evento-slider">
@@ -52,8 +47,12 @@
 	
 
 	<div class="sec-descripcion">
-		<p class="text-sections2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, magnam repellendus, nam veritatis sunt temporibus. Assumenda, quae delectus ea, optio quos nihil earum quibusdam tenetur maxime autem a, quidem. Aspernatur delectus, aperiam quo laudantium at fugiat dolorem eaque obcaecati perferendis ex quasi adipisci perspiciatis, impedit atque provident qui dolores. Possimus, beatae adipisci dolorum incidunt earum, voluptatem impedit quos fuga tenetur. Nemo animi libero, in nobis commodi suscipit aliquid sapiente, rem tenetur, cumque distinctio, ab iusto tempora eaque laboriosam laudantium. Dolore, explicabo corrupti officiis ipsa quam nesciunt modi. Ullam expedita dolorum corrupti, in, dignissimos sequi neque odit perferendis. Sapiente maxime vero doloribus perferendis, reprehenderit aperiam quia placeat saepe optio voluptatibus necessitatibus laboriosam, iusto magnam atque architecto vitae rem nulla exercitationem quasi obcaecati soluta blanditiis veniam odio autem nostrum? Doloremque, sit, temporibus?</p>
-		<img src="IMG/LogoBlanc_2.png" alt="logo marvel arts" class="logo-ma-ext">
+		<p class="text-sections2">El evento Marvel Arts se ha creado con la idea de acercar dos universos muy amplios: el UCM (Universo cinematográfico de Marvel) y el arte. Para ello hemos seleccionado los elementos de cada uno de ellos que más similitudes tienen. <br>
+		¿Qué vas a encontrar en Marvel Arts? <br>
+		Un evento único con esencia propia el cual nos va a recordar lo personal que es una exposición de arte con la energía de un evento de superhéroes. Para lograr nuestro objetivo, hemos organizado una serie de actividades explicadas a continuación, todas ligadas al UCM que nos van a llevar a una experiencia totalmente nueva e interactiva. <br>
+		<button><a href="#"></a class="botonDesc"><span>Descargar PDF explicativo</span></button>
+		</p>
+		<img src="IMG/Logos/logo-marvelarts-negre.png" alt="logo marvel arts" class="logo-ma-ext">
 		<img src="IMG/Expo_drstrange.jpeg" alt="expo dr strange">
 	</div>
 
@@ -62,11 +61,31 @@
 		<div class="princ-mapa">
 			<div class="sub-mapa">
 				<h2 class="titulo-sec">Horario</h2>
-				<p class="text-sections2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iste fugiat velit at saepe dolore voluptates odit laborum beatae ratione accusantium veritatis laboriosam cupiditate mollitia fugit dicta fuga vero, voluptas eligendi ut reprehenderit, tempore distinctio facere! Quisquam nostrum asperiores, odio!</p>
+				<p class="text-sections2"><span>20 Mayo</span> <br>
+					10:00 - 12:00 Inicio y presentación del evento y las actividades del día. <br>
+					12:00 - 15:00 Espectáculos <br>
+					15:00 - 18:00
+					Concursos <br><br>
+					<span>21 Mayo</span> <br>
+					10:00 - 11:00 Presentación de las actividades del día. <br>
+					11:00 - 14:00 Espectáculos <br>
+					15:00 - 18:00
+					Concursos <br><br>
+					<span>22 Mayo</span> <br>
+					10:00 - 11:00 Entrega de premios. <br>
+					11:00 - 18:00 Visionado de las películas. 
+				</p>
 			</div>
 			<div class="sub-mapa">
 				<h2 class="titulo-sec">Como llegar</h2>
-				<p class="text-sections2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iste fugiat velit at saepe dolore voluptates odit laborum beatae ratione accusantium veritatis laboriosam cupiditate mollitia fugit dicta fuga vero, voluptas eligendi ut reprehenderit, tempore distinctio facere! Quisquam nostrum asperiores, odio!</p>
+				<p class="text-sections2"><span>En bici</span><br>Estación de Bicing (59) y aparcamientos de bicicletas al lado del museo. <br>
+				<span>En metro</span><br>L1 (Catalunya o Universitat), L2 (Universitat), L3 (Catalunya o Liceu). <br>
+				<span>En autobús</span><br>
+				7, 22, 24, 47, 52, 54, 55, 59, 62, 63, 67, 120, V13, V15, H12, H16, D50, L94, L95, Aerobús y Bus Turístico. <br>
+				<span>En tren</span><br>
+				Plaça de Catalunya (FGC y RENFE). <br>
+				<span>En coche</span><br>
+				Aparcamiento de la plaça dels Àngels. <br></p>
 			</div>
 		</div>
 	</div>
@@ -80,13 +99,14 @@
 		</div>
 
 		<div class="cont-slider-act">
-			<img src="IMG/Actividades/act1.jpg" alt="" class="slider-act" id="img-act1">
-			<img src="IMG/Actividades/act4.jpg" alt="" class="slider-act" id="img-act2">
-			<img src="IMG/Actividades/act2.jpeg" alt="" class="slider-act" id="img-act3">
+			<img src="IMG/Actividades/act1.jpg" alt="actividades" class="slider-act" id="img-act1">
+			<img src="IMG/Actividades/act4.jpg" alt="actividades" class="slider-act" id="img-act2">
+			<img src="IMG/Actividades/act2.jpeg" alt="actividades" class="slider-act" id="img-act3">
 		</div>
 		<div class="cont-act">
 				<h1 class="titulo-princ">Actividades</h1>
-				<p class="texto-princ text-noticias">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Recusandae blanditiis doloremque est asperiores voluptate deserunt rem earum porro inventore et, magni, tempora expedita itaque sit consequatur, ducimus, alias voluptatum adipisci dolor facere nemo labore. Quod iste doloremque molestias amet rem.</p>
+				<p class="texto-princ text-noticias">Las actividades disponibles en el evento van a ser las siguientes: <br><br> La exposición central ubicada en el atrio del edificio Meyer del MACBA en la que se van a exponer figuras a tamaño real de los superhéroes, los vestuarios y el atrezzo originales de las películas. <br><br> Los espectáculos realizados en vivo por actores en los que se van a recrear las escenas de acción de las películas, en los que se va a usar el vestuario y atrezzo oficial. <br><br> Los concursos de disfraces de los asistentes, en los que se va a valorar el nivel de trabajo y dedicación empleados, así como la concordancia y la actuación en relación al original.
+				</p>
 		</div>
 	</div>
 
@@ -98,26 +118,26 @@
 			<div class="con-concursos">
 				<div class="contenido-concursos">
 					<h2 class="titulo-princ">Concurso Dibujo</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p>Concurso en el que se va a valorar el diseño hecho a lápiz, grafito, lápiz de color o cualquier técnica seca. En ésta categoria no entra ninguna pieza artística en la que se haya empleado técnica húmeda o técnica digital.</p>
 				</div>
 			</div>
 			<div class="con-concursos">
 				<div class="contenido-concursos">
 					<h2 class="titulo-princ">Concurso acuarela</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p>Concurso en el que se va a valorar el diseño hecho con acuarela, óleo o cualquier técnica húmeda. En ésta categoria no entra ninguna pieza artística en la que se haya empleado técnica seca (excepto en el boceto) o técnica digital.</p>
 				</div>
 			</div>
 			<div class="con-concursos">
 				<div class="contenido-concursos">
 					<h2 class="titulo-princ">Concurso digital</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p>Concurso en el que se va a valorar el diseño hecho con técnicas digitales (incluidos los programas de adobe). En ésta categoria no entra ninguna pieza artística en la que se haya empleado técnica seca o técnica húmeda.</p>
 				</div>
 			</div>
 		</div>
-		<p class="text-sections text-conc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum ullam optio eum sequi error et blanditiis? Laudantium, et consequatur fugiat eius dolor minima suscipit laborum, hic nesciunt inventore cum molestias quas dignissimos dolores ipsa quisquam ipsum. Maxime ratione ducimus doloribus labore. Repudiandae ad aut eveniet facilis dolorem vitae rerum incidunt recusandae eum deleniti voluptas quidem quia repellendus quae sint reiciendis sed doloribus odio, sit quasi labore qui repellat tempore?</p>
+		<p class="text-sections text-conc">Los concursos de arte se van a realizar en segundo día del evento (21 de Mayo) de 15:00 a 18:00 en el auditorio del edificio Meyer del MACBA. Éstos concursos van a tener tres ganadores cada uno, los cuales van a ser desvelados por el jurado el tercer día del evento (22 de Mayo) de 10:00 a 11:00 en el auditorio del edificio Meyer. <br><br>
+			<span>Primer premio</span><br> Pack de productos de merchandising Marvel Arts valorado en 50€ + réplica Gemas del Infinito. <br>
+			<span>Segundo premio</span><br> Pack de productos de merchandising Marvel Arts valorado en 50€. <br>
+			<span>Tercer premio</span><br> Pack de productos de merchandising Marvel Arts valorado en 30€.</p>
 	</div>
 	<div class="sec-merch" id="merch-bg">
 		<div id="filtre"></div>
@@ -149,7 +169,7 @@
 				<li><a href="tickets.html">TICKETS</a></li>
 				<li><a href="noticia.html">NOTICIAS</a></li>
 				<li><a href="contacto.html">CONTACTO</a></li>
-				<li><a href="#">FAQS</a></li>
+				<li><a href="faqs.html">FAQS</a></li>
 			  </ul>
 			</div>
 			<img src="img/logos/logo-llotja-blanc.svg" alt="easd Llotja">
@@ -176,6 +196,12 @@
 	<script>
 
 		setZindex();
+		function toggle(){
+			var sec = document.getElementById('superNavbar');
+			var nav = document.getElementById('menu-b');
+			sec.classList.toggle('active')
+			nav.classList.toggle('active')
+		}
 	</script>
 </body>
 </html>

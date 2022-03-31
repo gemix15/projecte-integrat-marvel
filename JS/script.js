@@ -50,12 +50,10 @@ function scrollNav(){
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     menuA.style.height = "0";
-    // menuB.style.height = '70px';
-    // menuB.style.top= '0';
+
   } else if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) {
     menuA.style.height = "60px";
-    // menuB.style.height = '50px';
-    // menuB.style.top = '50px';
+
   }
 }
 
@@ -110,3 +108,5 @@ function introWeb(){
   introLink.style.display = "block";
   
 }
+
+

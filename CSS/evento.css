@@ -3,9 +3,15 @@
 
 /*Sección evento*/
 
-.evento-slider
+.sec-evento
 {
 	width: 100vw;
+	height: 100vh;
+}
+
+.evento-slider
+{
+	width: 100%;
 	height: auto;
 	position: absolute;
 	top: 0;
@@ -69,13 +75,13 @@
 .sec-descripcion
 {
 	width: 100%;
-	height: 600px;
+	height: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	background: url(../IMG/background_galaxy.jpg);
+/*	background: url(../IMG/background_galaxy.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
-	border: solid 1px #000;
+	background-size: cover;*/
+	/*border: solid 1px #000;*/
 	overflow: hidden;
 	padding: 100px;
 }
@@ -84,7 +90,7 @@
 {
 	width: 100%;
 	margin: auto;
-	color: #fff;
+	color: #000;
 }
 
 .sec-descripcion img 
@@ -101,14 +107,32 @@
 	margin: auto;
 }
 
+.sec-descripcion span 
+{
+	font-size: 1.1em;
+	color: #fff;
+}
+
+.sec-descripcion button
+{
+	background-color: #000;
+	padding: 5px;
+	margin: 10px auto;
+	border-radius: 20px;
+}
+
+.sec-descripcion button:hover
+{
+	background-color: red;
+}
+
 /*Sección mapa*/
 
 .sec-mapa
 {
 	width: 100%;
-	height: 500px;
-	background-color: #3e3e3e;
-	border: solid 1px #000;
+	height: auto;
+	background-color: #000;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -138,19 +162,26 @@
 	/* margin: auto; */
 }
 
+.sub-mapa span 
+{
+	font-size: 1.1em;
+	color: red;
+}
+
 /*Sección actividades*/
 
 .sec-act
 {
 	width: 100%;
 	height: 900px;
-	background-color: #202020;
-	border: solid 1px #fff;
+	background-color: #000;
+	/*border: solid 1px #fff;*/
 	overflow: hidden;
 	position: relative;
 }
 
-.contTempAct{
+.contTempAct
+{
 	position: absolute;
 	width: auto;
 	top: 0px;
@@ -161,11 +192,9 @@
 
 .tab-act
 {
-	width: 50px;
-	height: 50px;
-	/*font-size: 1.5rem;
-	color: #fff;*/
-	background-color: #3e3e3e;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
 	margin: 0 5px;
 	border-radius: 50%;
 }
@@ -174,12 +203,12 @@
 {
 	width: auto;
 	height: 100%;
-	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
 }
 
-.tab-active
+.tab-active, .tab-act:hover
 {
-	background-color: hotpink;
+	background-color: red;
 }
 
 .slider-act
@@ -189,6 +218,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	transition: 1s;
+	display: block;
 	/* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
 }
 
@@ -206,19 +236,18 @@
 .sec-act h1
 {
 	font-size: 9rem;
-	color: #fff;
-	/* position: relative;
-	bottom: 0; */
+	color: red;
 	margin-top: 40%;
-	background-color: red;
+	/*background-color: rgba(0, 0, 0, 0.6);*/
 }
 
 .text-noticias
 {
-	font-size: 1.7rem;
+	font-size: 1.1rem;
 	color: #fff;
-	/* position: relative;
-	bottom: 0; */
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: left;
+	padding: 10px 5%;
 }
 
 /*Sección concursos*/
@@ -236,9 +265,15 @@
 	text-align: center;
 	width: 800px;
 	height: auto;
-	margin: -200px auto 20px auto;
+	margin: -300px auto 20px auto;
 	font-size: 1em;
 	color: #fff;
+}
+
+.sec-concursos span 
+{
+	font-size: 1.1em;
+	color: red;
 }
 
 .princ-concursos
@@ -254,8 +289,8 @@
 
 .con-concursos
 {
-	width: 500px;
-	height: 500px;
+	width: 400px;
+	height: 400px;
 	margin: auto 2%;
 	background-color: blue;
 	transition: 1s;
@@ -264,7 +299,7 @@
 
 .con-concursos:hover
 {
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
 .con-concursos:nth-child(1)
@@ -297,7 +332,7 @@
 	float: left;
 	width: 300px;
 	height: auto;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
 	padding: 20px;
 	color: #fff;
 	box-sizing: border-box;
@@ -319,9 +354,6 @@
 
 /* Secció merchandising */
 
-
-/* POSAR LOGOS I/O QR AL FOOTER */
-/* ADAPTAR TOT AMB @MEDIA */
 .sec-merch
 {
 	width: 100%;
@@ -344,21 +376,6 @@
 	z-index: 3;
 	transition: all 2s;
 }
-
-/*.sec-merch::before{
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	opacity: 0.5;
-/*	background-color: orange;
-}*/
-
-/*.sec-merch:hover::before{
-	opacity: 0.5;
-}*/
 
 .cont-merch
 {
@@ -391,9 +408,12 @@
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 850px){
 	.sec-evento{
-		background-image: url(../IMG/comic.jpg);
+		background-image: url(../IMG/fondos/fondo3.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 700px;
 	}
 	.evento-slider{
 		display: none;
@@ -403,14 +423,12 @@
 	}
 	.sec-descripcion{
 		padding: 20px;
-		display: inherit;
+		display: flex;
+		flex-direction: column;
 	}
-	.sec-descripcion img {
-		display: none;
+	.sec-descripcion img, .logo-ma-ext {
+		margin: 20px auto;
 	}
-	.sec-descripcion .logo-ma-ext{
-		display: none;
-	}	
 	.sec-mapa iframe {
 	    display: none;
 	}
@@ -445,11 +463,11 @@
 		font-size: .8rem;
 	}
 	.sec-concursos {
-		height: 800px;
+		height: 750px;
 	}
 	.con-concursos {
-	    width: 150px;
-	    height: 150px;
+	    width: 200px;
+	    height: 200px;
 	    margin-top: 300px;
 	}
 	.con-concursos:hover{
@@ -467,9 +485,5 @@
 	}
 	.contenido-concursos p {
 		font-size: .6em;
-	}
-	.sec-concursos .text-conc {
-	 	width: 280px;
-		margin-top: -280px;
 	}
 }

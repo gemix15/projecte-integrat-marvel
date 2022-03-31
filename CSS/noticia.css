@@ -6,7 +6,7 @@
 
 body
 {
-    background-image: url(../IMG/fondos/fondo2.jpg);
+    background-image: url(../IMG/fondos/fondo3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -177,15 +177,57 @@ photo created by wirestock - www.freepik.com*/
     margin-top: 25px;
 }
 
+.noticias-contenedor button
+{
+    width: 150px;
+    height: auto;
+    background-color: #3e3e3e;
+}
+
 .noticias-contenedor a 
 {
     text-decoration: none;
     font-family: 'Raleway';
     font-size: 1rem;
-    color: red;
+    color: #fff;
+}
+
+.noticias-contenedor button:hover
+{
+    background-color: red;
 }
 
 .noticias-contenedor a:hover
 {
-    color: white;
+    color: #fff;
+} 
+
+
+@media only screen and (max-width: 850px){
+    .noticia-princ{
+        display: inline-flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .contenedor-noticia{
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+    .contenedor-noticia img {
+        width: 100%;
+        height: auto;
+    }
+    .contenedor1{
+        margin-top: 30px;
+    }
+    .noticia-sec {
+        display: flex;
+        flex-direction: column;
+    }
+    .noticias-contenedor {
+        width: 45%;
+        margin: 15px auto;
+    }
 }
+
